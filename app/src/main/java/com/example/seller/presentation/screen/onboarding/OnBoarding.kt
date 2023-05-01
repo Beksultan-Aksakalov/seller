@@ -51,13 +51,13 @@ import com.example.seller.route.Routes
 @Composable
 fun OnBoarding(navController: NavController) {
 
-    val viewModel: OnBoardingViewModel = viewModel()
-    val items by viewModel.state.observeAsState(emptyList())
+//    val viewModel: OnBoardingViewModel = viewModel()
+//    val items by viewModel.state.observeAsState(emptyList())
 
-    val pageCount = items.size
+    val pageCount = 4
     val pagerState = rememberPagerState()
 
-    Log.d("ITEMS", items.joinToString())
+//    Log.d("ITEMS", items.joinToString())
 
     Box(modifier = Modifier.fillMaxSize()) {
         HorizontalPager(
@@ -119,18 +119,18 @@ fun OnBoarding(navController: NavController) {
                 .align(Alignment.BottomCenter),
             horizontalArrangement = Arrangement.Center
         ) {
-//            Button(
-//                onClick = { navController.navigate(route = Routes.REGISTRATION_PHONE.name) },
-//                modifier = Modifier
-//                    .size(175.dp, 52.dp),
-//                colors = ButtonDefaults.buttonColors(
-//                    contentColor = Color.White, containerColor = Color.Black
-//                ),
-//                shape = RoundedCornerShape(80.dp)
-//
-//            ) {
-//                Text(text = "Войти")
-//            }
+            Button(
+                onClick = { navController.navigate(route = Routes.REGISTRATION_PHONE.name) },
+                modifier = Modifier
+                    .size(175.dp, 52.dp),
+                colors = ButtonDefaults.buttonColors(
+                    contentColor = Color.White, containerColor = Color.Black
+                ),
+                shape = RoundedCornerShape(80.dp)
+
+            ) {
+                Text(text = "Войти")
+            }
         }
 
         Row(
