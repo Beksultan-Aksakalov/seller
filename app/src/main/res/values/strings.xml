@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Seller</string>
+    <string name="app_name">SellerApp</string>
+    <string-array name="countries">
+        <item>Казахстан</item>
+    </string-array>
+    <string name="input_correct_format_phone">Введите правильный формат номера телефона</string>
 </resources>
